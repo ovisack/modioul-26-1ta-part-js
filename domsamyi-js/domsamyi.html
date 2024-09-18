@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom Samayi</title>
+</head>
+<body>
+    <br>
+    <br>
+    <br>
+    <p id="input-text-display">Default Input text</p>
+    <input  id="input-field" type="text">
+    <button id="btn-update"> updated</button>
+    <h1 id="handler-status">My wab pag wallace</h1>
+         <button onclick="handleOnClick()">handel Event by onclick Function</button>
+         <button id="even-listener">love</button>
+<script>
+    function handleOnClick(){
+        const handlerStatus=document.getElementById('handler-status')
+   handlerStatus.innerText ='Hand by function attached  on click'
+   
+   }
+   document.getElementById('even-listener').addEventListener('click', function(){
+ const  handlerStatus = document.getElementById('handler-status');
+
+  handlerStatus.innerText = 'text updated by Event listener button '
+   })
+   document.getElementById ('btn-update').addEventListener('click', function(){
+
+const inputField = document.getElementById('input-field');
+const inputText =  inputField.value;
+
+const p= document.getElementById('input-text-display');
+p.innerText=inputText;
+inputField.value='';
+
+   })
+</script>
+
+        </body>
+</html>

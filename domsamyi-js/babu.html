@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+    <title>Event Delegate</title>
+
+    <style>
+       #but-add-item{
+        background-color: blanchedalmond;
+       }
+    </style>
+</head>
+<body>
+    <h1>Explore Event Delegate </h1>
+
+    <section>
+        <ul id="list-container">
+        <li class="item">Lorem ipsum dolor sit, a s, temporibus. oremque exercitationem quos?</li>
+        <li class="item">Lontur necese sit, iure qui? Omnis, temporliquid ad doloremque exercitationem quos?</li>
+        <li class="item">Lorem ipsum dolor sitre qui? Omnaliquid ad doloremque exercitationem quos?</li>
+        <li class="item">Lorem ipsum dolor sit, Cupsseoribus. Sit aliquid aue exercitationem quos?</li>
+        <li class="titem">Lo maxime eligendi pariatur accusamus auporibus. Sit alemque exercitationem quos?</li>
+        <li class="item">Lorem ipsum dolor sit, amet mnis, temporibu ad doloremque exercitationem quos?</li>
+        <li class="item">Lorem ipsum dcessitatibus maxime eligeniquid ad doloremque exercitationem quos?</li>
+</ul>
+   <button id="but-add-item" >click me</button>
+    </section>
+    <script>
+    //     const items= document.getElementsByClassName('item');
+    //   for(const item of items){
+    //     item.addEventListener('click',function(event){
+    //        // console.log(event.target.parentNode);
+
+    //        event.target.parentNode.removeChild(event.target);
+    //     })
+    //   }
+
+
+document.getElementById('list-container').addEventListener('click', function(event){
+   // console.log(event.target);
+   event.target.parentNode.removeChild(event.target);
+})
+
+
+document.getElementById('but-add-item').addEventListener('click',function(){
+   const listContainer= document.getElementById('list-container');
+   
+    const li =document.createElement('li');
+    li.innerText='I lave You'
+    li.classList.add('item');
+    listContainer.appendChild(li);
+
+})
+    </script>
+</body>
+</html>

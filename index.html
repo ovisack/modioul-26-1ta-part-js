@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js Dom  Event</title>
+</head>
+<body>
+    <h1>Hello my wab pag</h1>
+  
+    <button onclick="console.log(7)">Click me</button>
+    <button onclick="console.log(50)">An ahter  </button>
+   <br>
+    <button onclick="document.body.style.backgroundColor='yellow'"> me</button>
+  <!-- option 2 -->
+    
+  <button onclick="makeRed()">Mek Red</button>
+   <!-- potion 3 -->
+  <button id="make-blue"> Mak Blue</button>
+   
+    <script src="./even.js"></script>
+    <script>
+        const makeBlueButton=document.getElementById('make-blue')
+        makeBlueButton.onclick=makeBlue;
+        function makeBlue(){
+            document.body.style.backgroundColor='blue';
+        }
+        
+        function makeRed(){
+            document.body.style.backgroundColor='red';
+        }
+    </script>
+    
+</body>
+</html>
